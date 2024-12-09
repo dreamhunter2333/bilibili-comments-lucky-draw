@@ -83,6 +83,16 @@ class SettingInterface(ScrollArea):
         # initialize layout
         self.__initLayout()
         cfg.themeChanged.connect(self.__setTheme)
+        self.setStyleSheet("""
+            SettingInterface, #scrollWidget {
+                background-color: transparent;
+            }
+
+            QScrollArea {
+                border: none;
+                background-color: transparent;
+            }
+        """)
 
     def __initLayout(self):
         self.settingLabel.move(20, 20)

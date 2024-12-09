@@ -36,5 +36,5 @@ python -m venv ./venv
 # 运行
 .\venv\Scripts\python main.py
 # 打包
-.\venv\Scripts\pyinstaller.exe -F -w -i main.icns main.py -p har_parser.py -p home_interface.py -p setting_interface.py -n 哔哩哔哩评论区抽奖工具
+.\venv\Scripts\pyinstaller.exe -F -w -i main.ico main.py -p har_parser.py -p home_interface.py -p setting_interface.py -n 哔哩哔哩评论区抽奖工具
 ```

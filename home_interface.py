@@ -60,6 +60,16 @@ class HomeInterface(QScrollArea):
             ['UID', 'NAME', 'COMMENTS'])
         # self.table.verticalHeader().hide()
         self.data = []
+        self.setStyleSheet("""
+            SettingInterface, #scrollWidget {
+                background-color: transparent;
+            }
+
+            QScrollArea {
+                border: none;
+                background-color: transparent;
+            }
+        """)
 
     def __onHarFileCardClicked(self):
         try:
