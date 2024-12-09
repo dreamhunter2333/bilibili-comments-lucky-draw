@@ -5,7 +5,7 @@
 
 ## 使用
 
-到 [Release 页面](releases) 下载对应的安装包，macos 版本打开很慢，需要等待一段时间。
+到 [Release 页面](https://github.com/dreamhunter2333/bilibili-comments-lucky-draw/releases) 下载对应的安装包，macos 版本打开很慢，需要等待一段时间。
 
 浏览器打开F12控制台的 `network` 页面, 然后打开某个哔哩哔哩视频，查看评论区滑动到最底部，点击下图图标保存 HAR 文件。
 
