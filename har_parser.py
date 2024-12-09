@@ -4,7 +4,7 @@ import json
 
 def get_all_uid_with_name_comments(path: str):
     res = []
-    with open(path, "r", ) as f:
+    with open(path, "r", encoding='utf-8') as f:
         data = json.load(f)
         entries = data['log']['entries']
 
