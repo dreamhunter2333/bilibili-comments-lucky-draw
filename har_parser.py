@@ -24,12 +24,15 @@ def get_all_uid_with_name_comments(path: str):
                 json_response = json.loads(text_response)
             for comment in json_response['data']['replies']:
                 res.extend(process_comment(comment))
-    return list(set(map(tuple, res)))
+    return list(
+        [item[1], item[2], item[3]]
+        for item in sorted(set(map(tuple, res)), key=lambda x: x[0], reverse=True)
+    )
 
 
 def process_comment(comment: dict):
     res = [[
-        comment['member']['mid'], comment['member']
+        comment['ctime'], comment['member']['mid'], comment['member']
         ['uname'], comment['content']['message']
     ]]
     # 由于评论的回复可能会有多层，抽奖需求只需要一层
